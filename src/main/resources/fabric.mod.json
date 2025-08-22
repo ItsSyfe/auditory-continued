@@ -5,10 +5,7 @@
 
   "name": "Auditory",
   "description": "A mod that expands and improves upon the sound and audio aspects of Minecraft!",
-  "authors": [
-    "Sydokiddo (Developer)",
-    "AmberSand (Additional Sounds)"
-  ],
+  "authors": ["Sydokiddo (Developer)", "AmberSand (Additional Sounds)"],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/auditory",
     "issues": "https://github.com/Sydokiddo/auditory/issues",
@@ -20,19 +17,11 @@
   "environment": "*",
 
   "entrypoints": {
-    "main": [
-      "net.sydokiddo.auditory.Auditory"
-    ],
-    "client": [
-      "net.sydokiddo.auditory.AuditoryClient"
-    ],
-    "modmenu": [
-      "net.sydokiddo.auditory.misc.config.ModMenuCompatibility"
-    ]
+    "main": ["net.sydokiddo.auditory.Auditory"],
+    "client": ["net.sydokiddo.auditory.AuditoryClient"],
+    "modmenu": ["net.sydokiddo.auditory.misc.config.ModMenuCompatibility"]
   },
-  "mixins": [
-    "auditory.mixins.json"
-  ],
+  "mixins": ["auditory.mixins.json"],
 
   "depends": {
     "fabricloader": ">=0.16.5",
@@ -41,8 +30,7 @@
     "java": ">=21"
   },
   "suggests": {
-    "another-mod": "*",
-    "modmenu" : "*",
-    "cloth config" : "*"
+    "modmenu": "*",
+    "cloth-config": "*"
   }
 }

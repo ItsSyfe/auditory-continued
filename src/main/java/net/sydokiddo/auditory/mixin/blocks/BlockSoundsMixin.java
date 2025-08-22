@@ -16,11 +16,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 // Any blocks in the respective tags will use the respective sound group.
 // This is entirely data-driven and can be controlled by adding the block's ID to the respective tag through a datapack or mod.
 
-@Mixin(BlockBehaviour.class)
+@Mixin(BlockBehaviour.BlockStateBase.class)
 abstract class BlockSoundsMixin {
 
     @Inject(at = @At("HEAD"), method = "getSoundType", cancellable = true)
-    private void auditory_alterSoundType(BlockState state, CallbackInfoReturnable<SoundType> info) {
+    private void auditory_alterSoundType(CallbackInfoReturnable<SoundType> info) {
+        BlockState state = (BlockState) (Object) this;
 
         if (state.is(AuditoryTags.BASALT_SOUNDS) && (Auditory.getConfig().block_sounds.blockSoundsConfig.overworldStoneVariantSounds)) {
             info.setReturnValue(SoundType.BASALT);

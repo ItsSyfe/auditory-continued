@@ -1,8 +1,6 @@
 {
-   "pack":{
-      "pack_format": 10,
-      "description": [
-		{"text":"Auditory Template Datapack","color":"gold"}
-	  ]
-   }
+  "pack": {
+    "pack_format": 48,
+    "description": [{ "text": "Auditory Template Datapack", "color": "gold" }]
+  }
 }
