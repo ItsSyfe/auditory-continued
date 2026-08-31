@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "auditory",
+  "id": "${id}",
   "version": "${version}",
-
-  "name": "Auditory",
+  "name": "${name}",
   "description": "A mod that expands and improves upon the sound and audio aspects of Minecraft!",
   "authors": [
-    "Sydokiddo (Developer)",
+    "Syfe",
+    "Sydokiddo (Original Developer)",
     "AmberSand (Additional Sounds)"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/auditory",
-    "issues": "https://github.com/Sydokiddo/auditory/issues",
-    "sources": "https://github.com/Sydokiddo/auditory"
+    "homepage": "https://modrinth.com/mod/auditory-continued",
+    "issues": "https://github.com/ItsSyfe/auditory-continued/issues",
+    "sources": "https://github.com/ItsSyfe/auditory-continued"
   },
 
   "license": "MIT",
@@ -21,13 +21,13 @@
 
   "entrypoints": {
     "main": [
-      "net.sydokiddo.auditory.Auditory"
+      "dev.syfe.auditory.Auditory"
     ],
     "client": [
-      "net.sydokiddo.auditory.AuditoryClient"
+      "dev.syfe.auditory.AuditoryClient"
     ],
     "modmenu": [
-      "net.sydokiddo.auditory.misc.config.ModMenuCompatibility"
+      "dev.syfe.auditory.misc.config.ModMenuCompatibility"
     ]
   },
   "mixins": [
@@ -35,14 +35,11 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.16.5",
-    "fabric": "*",
-    "minecraft": "1.21.1",
-    "java": ">=21"
+    "fabricloader": ">=0.17",
+    "minecraft": "${minecraft}"
   },
   "suggests": {
-    "another-mod": "*",
     "modmenu" : "*",
-    "cloth config" : "*"
+    "cloth_config" : "*"
   }
 }
