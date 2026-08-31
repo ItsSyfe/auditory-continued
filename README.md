@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://github.com/ItsSyfe/auditory-continued">
-    <img src="assets/mod_icon.png" alt="Icon" width="150" height="150">
+    <img src="src/main/resources/assets/auditory/icon.png" alt="Icon" width="200" height="200">
   </a>
 
   <h1 align="center">Auditory Continued</h1>
