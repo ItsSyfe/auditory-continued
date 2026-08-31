@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.blocks;
+package dev.syfe.auditory.mixin.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.sydokiddo.auditory.Auditory;
+import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.blocks;
+package dev.syfe.auditory.mixin.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
@@ -11,7 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.sydokiddo.auditory.Auditory;
+import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;

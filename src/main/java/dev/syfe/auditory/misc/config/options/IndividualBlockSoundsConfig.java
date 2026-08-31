@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.misc.config.options;
+package dev.syfe.auditory.misc.config.options;
 
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 

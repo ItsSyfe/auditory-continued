@@ -14,6 +14,13 @@
     "issues": "https://github.com/ItsSyfe/auditory-continued/issues",
     "sources": "https://github.com/ItsSyfe/auditory-continued"
   },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/YBMYbX3hrF"
+      }
+    }
+  },
 
   "license": "MIT",
   "icon": "assets/auditory/icon.png",

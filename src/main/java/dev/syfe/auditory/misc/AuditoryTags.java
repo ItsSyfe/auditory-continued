@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.misc;
+package dev.syfe.auditory.misc;
 
 
 import net.minecraft.core.registries.Registries;

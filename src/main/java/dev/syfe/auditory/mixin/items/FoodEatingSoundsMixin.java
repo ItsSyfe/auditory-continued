@@ -1,11 +1,11 @@
-package net.sydokiddo.auditory.mixin.items;
+package dev.syfe.auditory.mixin.items;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.sydokiddo.auditory.misc.AuditoryTags;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.misc.AuditoryTags;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

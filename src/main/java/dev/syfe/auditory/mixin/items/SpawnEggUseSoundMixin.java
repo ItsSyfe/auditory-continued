@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.items;
+package dev.syfe.auditory.mixin.items;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -9,8 +9,8 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SpawnEggItem;
-import net.sydokiddo.auditory.Auditory;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.Auditory;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

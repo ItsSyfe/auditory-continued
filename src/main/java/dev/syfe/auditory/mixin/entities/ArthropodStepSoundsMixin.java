@@ -1,9 +1,9 @@
-package net.sydokiddo.auditory.mixin.entities;
+package dev.syfe.auditory.mixin.entities;
 
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Silverfish;
-import net.sydokiddo.auditory.Auditory;
+import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

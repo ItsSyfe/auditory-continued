@@ -1,9 +1,9 @@
-package net.sydokiddo.auditory.misc.config;
+package dev.syfe.auditory.misc.config;
 
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
-import net.sydokiddo.auditory.misc.config.options.IndividualBlockSoundsConfig;
+import dev.syfe.auditory.misc.config.options.IndividualBlockSoundsConfig;
 
 // Mod Config
 

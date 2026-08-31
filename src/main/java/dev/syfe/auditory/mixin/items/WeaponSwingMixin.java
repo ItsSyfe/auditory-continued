@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.items;
+package dev.syfe.auditory.mixin.items;
 
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.ItemTags;
@@ -8,8 +8,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
-import net.sydokiddo.auditory.Auditory;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.Auditory;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;

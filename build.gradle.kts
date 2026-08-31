@@ -28,6 +28,8 @@ repositories {
 	}
 	strictMaven("https://www.cursemaven.com", "CurseForge", "curse.maven")
 	strictMaven("https://api.modrinth.com/maven", "Modrinth", "maven.modrinth")
+	strictMaven("https://maven.shedaniel.me/", "Shedaniel", "me.shedaniel.cloth")
+	strictMaven("https://maven.terraformersmc.com/releases/", "Terraformers", "com.terraformersmc")
 }
 
 dependencies {
@@ -45,7 +47,12 @@ dependencies {
 
 	// Use `mod{dependency type}` even on 26.1+ - loom-back-compat converts them
 	modImplementation("net.fabricmc:fabric-loader:${property("deps.fabric_loader")}")
-	fapi("fabric-lifecycle-events-v1", "fabric-resource-loader-v0", "fabric-content-registries-v0", "fabric-registry-sync-v0")
+	modImplementation("com.terraformersmc:modmenu:${property("deps.modmenu")}")
+	modApi("me.shedaniel.cloth:cloth-config-fabric:${property("deps.cloth")}") {
+		exclude(group = "net.fabricmc.fabric-api")
+	}
+
+	fapi("fabric-lifecycle-events-v1", "fabric-resource-loader-v0", "fabric-content-registries-v0", "fabric-registry-sync-v0", "fabric-key-binding-api-v1", "fabric-screen-api-v1")
 }
 
 loom {

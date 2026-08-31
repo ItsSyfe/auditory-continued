@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.items;
+package dev.syfe.auditory.mixin.items;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -7,7 +7,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.sydokiddo.auditory.Auditory;
+import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

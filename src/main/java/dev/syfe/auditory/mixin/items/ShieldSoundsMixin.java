@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.items;
+package dev.syfe.auditory.mixin.items;
 
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
@@ -11,8 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.level.Level;
-import net.sydokiddo.auditory.Auditory;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.Auditory;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

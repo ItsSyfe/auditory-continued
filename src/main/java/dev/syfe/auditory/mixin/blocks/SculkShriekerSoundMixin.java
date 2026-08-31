@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.blocks;
+package dev.syfe.auditory.mixin.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
@@ -9,8 +9,8 @@ import net.minecraft.world.level.block.SculkShriekerBlock;
 import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.sydokiddo.auditory.Auditory;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.Auditory;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;

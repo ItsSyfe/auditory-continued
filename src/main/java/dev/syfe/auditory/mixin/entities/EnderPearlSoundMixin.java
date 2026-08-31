@@ -1,4 +1,4 @@
-package net.sydokiddo.auditory.mixin.entities;
+package dev.syfe.auditory.mixin.entities;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.sounds.SoundEvents;
@@ -9,7 +9,7 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
-import net.sydokiddo.auditory.Auditory;
+import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

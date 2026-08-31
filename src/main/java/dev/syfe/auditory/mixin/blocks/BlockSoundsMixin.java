@@ -1,13 +1,13 @@
-package net.sydokiddo.auditory.mixin.blocks;
+package dev.syfe.auditory.mixin.blocks;
 
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.sydokiddo.auditory.Auditory;
-import net.sydokiddo.auditory.misc.AuditoryTags;
-import net.sydokiddo.auditory.sound.ModSoundEvents;
+import dev.syfe.auditory.Auditory;
+import dev.syfe.auditory.misc.AuditoryTags;
+import dev.syfe.auditory.sound.ModSoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
