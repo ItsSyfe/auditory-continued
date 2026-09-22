@@ -31,7 +31,7 @@
       "dev.syfe.auditory.AuditoryFabric"
     ],
     "client": [
-      "dev.syfe.auditory.client.AuditoryClientCommon"
+      "dev.syfe.auditory.client.AuditoryClientFabric"
     ],
     "modmenu": [
       "dev.syfe.auditory.misc.config.ModMenuCompatibility"

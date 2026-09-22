@@ -3,7 +3,13 @@ package dev.syfe.auditory.platform;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 
-public sealed interface ModLoaderAccess permits FabricLoaderAccess, NeoForgeLoaderAccess {
+public sealed interface ModLoaderAccess
+        permits
+        //? if fabric
+        FabricLoaderAccess
+        //? if neoforge
+        //NeoForgeLoaderAccess
+        {
     ModLoaderAccess INSTANCE =
             /*? if fabric{*/new FabricLoaderAccess();
             /*?} elif neoforge *///new NeoForgeLoaderAccess();
