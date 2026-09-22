@@ -28,10 +28,10 @@
 
   "entrypoints": {
     "main": [
-      "dev.syfe.auditory.Auditory"
+      "dev.syfe.auditory.AuditoryFabric"
     ],
     "client": [
-      "dev.syfe.auditory.AuditoryClient"
+      "dev.syfe.auditory.client.AuditoryClientCommon"
     ],
     "modmenu": [
       "dev.syfe.auditory.misc.config.ModMenuCompatibility"

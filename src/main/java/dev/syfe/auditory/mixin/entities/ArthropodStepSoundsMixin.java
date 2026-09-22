@@ -1,9 +1,9 @@
 package dev.syfe.auditory.mixin.entities;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.monster.Endermite;
 import net.minecraft.world.entity.monster.Silverfish;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -16,7 +16,7 @@ public class ArthropodStepSoundsMixin {
 
     @Inject(at = @At("TAIL"), method = "getMovementEmission", cancellable = true)
     private void auditory_enableStepSounds(CallbackInfoReturnable<Entity.MovementEmission> cir) {
-        if (Auditory.getConfig().misc_sounds.silverfish_step_sounds) {
+        if (AuditoryCommon.getConfig().misc_sounds.silverfish_step_sounds) {
             cir.setReturnValue(Entity.MovementEmission.ALL);
         }
     }

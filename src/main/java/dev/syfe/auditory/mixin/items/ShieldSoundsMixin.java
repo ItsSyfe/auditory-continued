@@ -1,5 +1,7 @@
 package dev.syfe.auditory.mixin.items;
 
+import dev.syfe.auditory.AuditoryCommon;
+import dev.syfe.auditory.sound.AuditoryItemSoundEvents;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -11,8 +13,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ShieldItem;
 import net.minecraft.world.level.Level;
-import dev.syfe.auditory.Auditory;
-import dev.syfe.auditory.sound.ModSoundEvents;
 import org.jetbrains.annotations.NotNull;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -30,13 +30,13 @@ public abstract class ShieldSoundsMixin extends Item implements Equipable {
 
     @Inject(at = @At("HEAD"), method = "use")
     private void auditory_blockSound(Level level, Player player, InteractionHand interactionHand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> cir) {
-        if (Auditory.getConfig().weapon_sounds.shield_blocking_sounds) {
-            level.playSound(null, player.getX(), player.getY(), player.getZ(), ModSoundEvents.ITEM_SHIELD_RAISE, SoundSource.PLAYERS, 0.1F, 0.8f + player.level().random.nextFloat() * 0.4F);
+        if (AuditoryCommon.getConfig().weapon_sounds.shield_blocking_sounds) {
+            level.playSound(null, player.getX(), player.getY(), player.getZ(), AuditoryItemSoundEvents.ITEM_SHIELD_RAISE, SoundSource.PLAYERS, 0.1F, 0.8f + player.level().random.nextFloat() * 0.4F);
         }
     }
 
     // Shields now have a unique equipping sound
 
     @Override
-    public @NotNull Holder<SoundEvent> getEquipSound() {return Holder.direct(ModSoundEvents.ITEM_SHIELD_EQUIP);}
+    public @NotNull Holder<SoundEvent> getEquipSound() {return Holder.direct(AuditoryItemSoundEvents.ITEM_SHIELD_EQUIP);}
 }

@@ -1,11 +1,11 @@
 package dev.syfe.auditory.mixin.items;
 
+import dev.syfe.auditory.sound.AuditoryItemSoundEvents;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import dev.syfe.auditory.misc.AuditoryTags;
-import dev.syfe.auditory.sound.ModSoundEvents;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,19 +21,19 @@ public abstract class FoodEatingSoundsMixin {
     @Inject(method = "getEatingSound", at = @At("HEAD"), cancellable = true)
     public void auditory_changeItemEatingSound(CallbackInfoReturnable<SoundEvent> cir) {
         if (this.is(AuditoryTags.DRIED_KELP_SOUNDS)) {
-            cir.setReturnValue(ModSoundEvents.DRIED_KELP_EAT);
+            cir.setReturnValue(AuditoryItemSoundEvents.DRIED_KELP_EAT);
         }
         else if (this.is(AuditoryTags.SOFT_FRUIT_SOUNDS)) {
-            cir.setReturnValue(ModSoundEvents.SOFT_FRUIT_EAT);
+            cir.setReturnValue(AuditoryItemSoundEvents.SOFT_FRUIT_EAT);
         }
         else if (this.is(AuditoryTags.CRUNCHY_FRUIT_SOUNDS)) {
-            cir.setReturnValue(ModSoundEvents.CRUNCHY_FRUIT_EAT);
+            cir.setReturnValue(AuditoryItemSoundEvents.CRUNCHY_FRUIT_EAT);
         }
         else if (this.is(AuditoryTags.STEW_SOUNDS)) {
-            cir.setReturnValue(ModSoundEvents.STEW_EAT);
+            cir.setReturnValue(AuditoryItemSoundEvents.STEW_EAT);
         }
         else if (this.is(AuditoryTags.VEGETABLE_SOUNDS)) {
-            cir.setReturnValue(ModSoundEvents.VEGETABLE_EAT);
+            cir.setReturnValue(AuditoryItemSoundEvents.VEGETABLE_EAT);
         }
     }
 }

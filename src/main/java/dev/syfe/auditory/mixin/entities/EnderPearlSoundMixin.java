@@ -1,5 +1,6 @@
 package dev.syfe.auditory.mixin.entities;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -9,7 +10,6 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -33,7 +33,7 @@ abstract class EnderPearlSoundMixin extends ThrowableItemProjectile {
         )
     )
     private void auditory_teleportSound(HitResult hitResult, CallbackInfo ci) {
-        if (Auditory.getConfig().item_sounds.ender_pearl_sounds &&
+        if (AuditoryCommon.getConfig().item_sounds.ender_pearl_sounds &&
             (!FabricLoader.getInstance().isModLoaded("endlessencore")) &&
             this.getOwner() instanceof Player player) {
                 player.playNotifySound(SoundEvents.CHORUS_FRUIT_TELEPORT, SoundSource.PLAYERS, 0.8f, 1.0f);

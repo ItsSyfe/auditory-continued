@@ -1,5 +1,6 @@
 package dev.syfe.auditory.mixin.blocks;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -11,7 +12,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;
@@ -30,7 +30,7 @@ public abstract class FlowerPotPlantSoundMixin {
         )
     )
     private void auditory_pottingSound(ItemStack itemStack, BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult, CallbackInfoReturnable<ItemInteractionResult> cir) {
-        if (Auditory.getConfig().block_sounds.flower_pot_sounds) {
+        if (AuditoryCommon.getConfig().block_sounds.flower_pot_sounds) {
             level.playSound(player, blockPos, SoundEvents.HANGING_ROOTS_PLACE, SoundSource.BLOCKS, 1.0f, 0.8f + level.random.nextFloat() * 0.4F);
         }
     }

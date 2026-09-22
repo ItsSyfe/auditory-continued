@@ -1,5 +1,6 @@
 package dev.syfe.auditory.mixin.entities;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -8,7 +9,6 @@ import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.BoatItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;
@@ -31,7 +31,7 @@ public abstract class BoatPlaceSoundMixin extends Item {
         )
     )
     private Boat auditory_placeSound(Boat boat, Level level, Player player, InteractionHand interactionHand) {
-        if (Auditory.getConfig().item_sounds.boat_sounds) {
+        if (AuditoryCommon.getConfig().item_sounds.boat_sounds) {
             if (boat.getVariant() == Boat.Type.BAMBOO) {
                 level.playSound(null, boat, SoundEvents.BAMBOO_WOOD_PLACE, SoundSource.BLOCKS, 1.0f, 0.8f + level.random.nextFloat() * 0.4F);
             }

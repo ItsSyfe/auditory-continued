@@ -1,5 +1,6 @@
 package dev.syfe.auditory.mixin.blocks;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -9,7 +10,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CakeBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -26,7 +26,7 @@ public abstract class CakeEatingSoundMixin extends Block {
 
     @Inject(method = "eat", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/food/FoodData;eat(IF)V"))
     private static void auditory_eatingSound(LevelAccessor levelAccessor, BlockPos blockPos, BlockState blockState, Player player, CallbackInfoReturnable<InteractionResult> cir) {
-        if (Auditory.getConfig().block_sounds.cake_eating_sounds) {
+        if (AuditoryCommon.getConfig().block_sounds.cake_eating_sounds) {
             levelAccessor.playSound(player, blockPos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1.0f, 0.8f + levelAccessor.getRandom().nextFloat() * 0.4F);
         }
     }

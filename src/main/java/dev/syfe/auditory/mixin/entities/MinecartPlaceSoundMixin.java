@@ -1,12 +1,12 @@
 package dev.syfe.auditory.mixin.entities;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.vehicle.AbstractMinecart;
 import net.minecraft.world.item.MinecartItem;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.At.Shift;
@@ -26,7 +26,7 @@ public class MinecartPlaceSoundMixin {
     )
     private AbstractMinecart auditory_placeSound(AbstractMinecart abstractMinecart, UseOnContext useOnContext) {
         Level level = useOnContext.getLevel();
-        if (Auditory.getConfig().item_sounds.minecart_sounds) {
+        if (AuditoryCommon.getConfig().item_sounds.minecart_sounds) {
             level.playSound(null, abstractMinecart, SoundEvents.NETHERITE_BLOCK_PLACE, SoundSource.BLOCKS, 1.0f, 1.2f + level.random.nextFloat() * 0.4F);
         }
         return abstractMinecart;

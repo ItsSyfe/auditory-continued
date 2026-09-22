@@ -1,5 +1,6 @@
 package dev.syfe.auditory.mixin.blocks;
 
+import dev.syfe.auditory.AuditoryCommon;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
@@ -10,7 +11,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import dev.syfe.auditory.Auditory;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -23,7 +23,7 @@ public abstract class FallOnBlockMixin {
 
     @Inject(method = "fallOn", at = @At("RETURN"))
     private void auditory_fallSound(Level level, BlockState blockState, BlockPos blockPos, Entity entity, float f, CallbackInfo ci) {
-        if (Auditory.getConfig().block_sounds.falling_in_place_sound) {
+        if (AuditoryCommon.getConfig().block_sounds.falling_in_place_sound) {
             if (!entity.isCrouching() && entity instanceof LivingEntity && entity.getDeltaMovement().horizontalDistance() >= 0) {
                 if (!blockState.isAir() && !blockState.is(BlockTags.FIRE) && !blockState.is(BlockTags.PORTALS) && (!(blockState.getBlock() instanceof LiquidBlock))) {
                     SoundType soundType = blockState.getSoundType();
